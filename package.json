@@ -1,0 +1,25 @@
+{
+  "name": "cli-www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Immayou/CLI-WWW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Immayou/CLI-WWW/issues"
+  },
+  "homepage": "https://github.com/Immayou/CLI-WWW#readme",
+  "dependencies": {
+    "inquirer": "^9.2.5",
+    "nodemon": "^2.0.22"
+  }
+}
