@@ -78,6 +78,30 @@ function workWithValues() {
 
 inquirer.prompt(questions).then(workWithValues);
 
+// // Exit the inquirer prompt
+// function exit() {
+//   prompt.ui.close();
+// }
+
+// // close inquirer input if user press "escape" key
+// process.stdin.on("keypress", (_, key) => {
+//   if (key.name === "escape") {
+//     exit();
+//   }
+// });
+
+// // Declare your prompt and save it
+// const prompt = inquirer.prompt({
+//   name: "myInput",
+//   type: "input",
+//   // ...
+// });
+
+// // Listen when the user submit a value
+// prompt.then((values) => {
+//   console.log(values["myInput"]);
+//   // ...
+// });
 // import inquirer from "inquirer";
 
 // function getGithubCredentials(callback) {
