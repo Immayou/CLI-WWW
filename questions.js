@@ -1,3 +1,8 @@
+function exit() {
+  console.log("\n" + "До побачення!");
+  process.exit();
+}
+
 export const questions = [
   {
     name: "values",

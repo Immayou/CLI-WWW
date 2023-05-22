@@ -1,11 +1,6 @@
 import inquirer from "inquirer";
 import { questions } from "./questions.js";
 
-function exit() {
-  console.log("\n" + "До побачення!");
-  process.exit();
-}
-
 function workWithValues() {
   const { values, operation } = arguments[0];
 
