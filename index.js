@@ -18,7 +18,6 @@ const questions = [
       }
       const valuesWithoutSpaces = input.replace(/ /g, "");
       if (!/^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(valuesWithoutSpaces)) {
-        console.log(/^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(input));
         return "Ви використали недоспустимі символи. Введіть, буль-ласка, літери та цифри";
       }
       return true;
