@@ -6,9 +6,8 @@ const questions = [
     type: "input",
     message: "Введіть 10 слів або чисел, розділяючи їх пробілом",
     validate: (input) => {
-      if (input === "exit") {
-        console.log("\n" + "Goodbye!");
-        process.exit();
+      if (input.toLowerCase() === "exit") {
+        exit();
       }
       const arrayOfValues = input
         .trim()
@@ -41,8 +40,7 @@ const questions = [
       "Option: ",
     validate: (input) => {
       if (input.toLowerCase() === "exit") {
-        console.log("\n" + "Goodbye!");
-        process.exit();
+        exit();
       }
       if (!Number(input) || Number(input) < 1 || Number(input) > 6) {
         return "Введіть цифру 1-6 відповідно до обраної операції";
@@ -52,17 +50,24 @@ const questions = [
   },
 ];
 
+function exit() {
+  console.log("\n" + "До побачення!");
+  process.exit();
+}
+
 function workWithValues() {
   const { values, operation } = arguments[0];
+
   const arrayOfValues = values
     .trim()
     .split(" ")
     .map((item) => item.toLowerCase())
     .filter((item) => item !== "");
-  const words = arrayOfValues
-    .map((item) => item.toLowerCase())
-    .filter((item) => !Number(item));
+
+  const words = arrayOfValues.filter((item) => !Number(item));
+
   const numbers = arrayOfValues.filter((item) => Number(item));
+
   switch (operation) {
     case "1":
       const sortedWords = [...words].sort();
