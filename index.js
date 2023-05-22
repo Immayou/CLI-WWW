@@ -16,6 +16,11 @@ const questions = [
       if (arrayOfValues.length !== 10) {
         return `Введена вами кількість слів або чисел - ${arrayOfValues.length}. Будь ласка, введіть 10 слів або чисел.`;
       }
+      const valuesWithoutSpaces = input.replace(/ /g, "");
+      if (!/^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(valuesWithoutSpaces)) {
+        console.log(/^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(input));
+        return "Ви використали недоспустимі символи. Введіть, буль-ласка, літери та цифри";
+      }
       return true;
     },
   },
